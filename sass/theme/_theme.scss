@@ -1,2 +1,28 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+body{
+    position: relative;
+}
+#page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    min-height: 100vh;
+    #content{
+        flex:1;
+    }
+   
+}
+
+#Header{
+    nav{
+        background-color: $primary;
+    }
+}
+#Footer{
+    background-color: $secondary;
+}
+
+section.fp{
+    min-height: 60vh;
+}

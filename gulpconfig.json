@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/coder/",
+    "proxy": "zakcnaan.local/",
     "notify": false
   },
   "browserSyncWatchFiles" : [
