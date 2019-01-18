@@ -14,9 +14,9 @@
     "img": "./img",
     "imgsrc": "./src/img",
     "sass": "./sass",
-    "node": "./node_modules/",
+    "node": "node_modules/",
     "bower": "./bower_components/",
-    "dev": "./src",
+    "dev": "src",
     "dist": "./dist",
     "distprod": "./dist-product",
     "vendor": ""

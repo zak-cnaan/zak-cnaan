@@ -6852,5 +6852,9 @@
 })();
 
 $(document).ready(function (){
-    $('body').scrollspy({ target: '#navbarCollapse', offset: 60 });
+    // $('body').scrollspy({ target: '#navbarCollapse', offset: 60 });
+
+    // var node = document.querySelector('#cake');
+    
+
 });

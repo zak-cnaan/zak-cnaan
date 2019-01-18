@@ -1,0 +1,87 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\zak\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add animate,css
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\wamp64\bin\php\php7.1.9;C:\ProgramData\ComposerSetup\bin;C:\Users\zak\AppData\Local\Microsoft\WindowsApps;;C:\Users\zak\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\zak\AppData\Roaming\Composer\vendor\bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/animate,css: Not found
+      at Request.params.callback [as _callback] (C:\Users\zak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66255:18)
+      at Request.self.callback (C:\Users\zak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129397:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (C:\Users\zak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:130369:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (C:\Users\zak\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:130291:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "understrap",
+    "version": "0.8.9",
+    "description": "WordPress Theme framework",
+    "main": "index.js",
+    "scripts": {
+      "postinstall": "gulp copy-assets"
+    },
+    "engines": {
+      "npm": ">=2.1.8"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/holger1411/understrap.git"
+    },
+    "keywords": [
+      "wordpress",
+      "theme",
+      "framework",
+      "bootstrap",
+      "underscores"
+    ],
+    "author": "Holger Koenemann",
+    "license": "GPL-2.0",
+    "bugs": {
+      "url": "https://github.com/holger1411/understrap/issues"
+    },
+    "homepage": "https://understrap.com",
+    "dependencies": {
+      "bootstrap": "4.2.1",
+      "browser-sync": "^2.26.3",
+      "del": "^3.0.0",
+      "font-awesome": "^4.7.0",
+      "gulp": "3.9.1",
+      "gulp-autoprefixer": "6.0.0",
+      "gulp-clean-css": "^4.0.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-ignore": "^2.0.2",
+      "gulp-imagemin": "^5.0.3",
+      "gulp-plumber": "^1.2.1",
+      "gulp-rename": "^1.4.0",
+      "gulp-replace": "1.0.0",
+      "gulp-rimraf": "^0.2.2",
+      "gulp-sass": "4.0.2",
+      "gulp-sequence": "1.0.0",
+      "gulp-sourcemaps": "2.6.4",
+      "gulp-uglify": "^3.0.1",
+      "gulp-watch": "5.0.1",
+      "run-sequence": "^2.2.1",
+      "undescores-for-npm": "^1.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

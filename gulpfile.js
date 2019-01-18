@@ -16,6 +16,7 @@ var cleanCSS = require( 'gulp-clean-css' );
 var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var expect = require('gulp-expect-file');
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
@@ -123,6 +124,8 @@ gulp.task( 'browser-sync', function() {
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
 gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 } );
+gulp.task( 'build', ['sass', 'scripts'], function() {
+} );
 
 // Run:
 // gulp scripts.
@@ -136,12 +139,18 @@ gulp.task( 'scripts', function() {
         // End - All BS4 stuff
 
         paths.dev + '/js/skip-link-focus-fix.js',
+        // paths.dev + '/lib/aos/aos.js',
+        //paths.dev + '/js/scrollreveal.min.js',
+        //paths.dev + '/js/in-view.min.js',
+        paths.node + '/gumshoejs/dist/js/gumshoe.js',
 
+        paths.node + '/smooth-scroll/dist/smooth-scroll.min.js',
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
         paths.dev + '/js/custom-javascript.js'
     ];
-  gulp.src( scripts )
+  return gulp.src( scripts )
+  .pipe(expect(scripts))
     .pipe( concat( 'theme.min.js' ) )
     .pipe( uglify() )
     .pipe( gulp.dest( paths.js ) );
@@ -189,6 +198,17 @@ gulp.task( 'copy-assets', function() {
 // _s JS files into /src/js
     gulp.src( paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js' )
         .pipe( gulp.dest( paths.dev + '/js' ) );
+
+      
+    // gulp.src( paths.node + 'aos/dist/*.*' )
+    // .pipe( gulp.dest( paths.dev + '/lib/aos' ) );
+
+     gulp.src( paths.node + 'animate.css/animate.min.css' )
+     .pipe( gulp.dest( paths.dev + '/lib/animate.css/' ) );
+
+
+    // gulp.src( paths.node + 'in-view/dist/in-view.min.js' )
+    // .pipe( gulp.dest( paths.dev + '/js' ) );
 });
 
 // Deleting the files distributed by the copy-assets task
@@ -228,4 +248,4 @@ gulp.task( 'clean-dist-product', function() {
 // Run:
 // gulp
 // Starts watcher (default task)
-gulp.task('default', ['watch']);
+gulp.task('default', ['build']);
